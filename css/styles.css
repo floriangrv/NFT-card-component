@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --clr-neutral-900: hsl(217, 54%, 11%);
+    --clr-neutral-800: hsl(216, 50%, 16%);
+    --clr-neutral-700: hsl(215, 32%, 27%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-primary-200: hsl(215, 51%, 70%);
+    --clr-secondary-600: hsl(178, 100%, 50%);
+
+    --font-primary: 'Outfit', sans-serif;
+ 
+}
+
+body {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-primary-200);
+    font-family: var(--font-primary);
+    padding: 24px;
+    
+    
+}
+
+.hover:hover {
+    color: var(--clr-secondary-600);
+    
+}
+
+.img-hover {
+    position: relative;
+}
+
+
+.img-hover:hover::after {
+    content: url('../images/icon-view.svg');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(19, 194, 194, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+
+.card__details {
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    max-width: 375px;
+    background-color: var(--clr-neutral-800);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 16px;
+    margin: 0 auto;
+    box-shadow: 0px 13px 10px 20px rgba(0,0,0,0.1);
+}
+
+.card__img img {
+    border-radius: 12px;
+    position: relative;
+    
+}
+
+.card__title {
+    color: var(--clr-neutral-100);
+    font-weight: 600;
+}
+.card__description {
+    font-weight: 300;
+}
+
+.card__price {
+    color: var(--clr-secondary-600);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card__delay {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card__footer {
+    display: flex;
+    gap: 18px;
+    border-top: 1px solid var(--clr-neutral-700);
+    padding-top: 20px;
+}
+
+.card__footer-img {
+    max-width: 2rem;
+  
+    border: 1px solid var(--clr-neutral-100);
+    border-radius: 30px;
+    
+}
+.card__creathor span {
+    color: var(--clr-neutral-100);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 280px) {
+    .card {
+      max-width: 100%;
+      padding: 14px;
+    }
+    .card__footer-img {
+      width: 50%;
+    }
+  }
